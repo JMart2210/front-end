@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOP Sign-up Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero-side">
+      <div class="logo-box">
+        <img src="./img/odin-lined.png" alt="Project logo" />
+        <p class="logo-name">ODIN</p>
+      </div>
+      <div class="footer-text">
+        <p class="photo-credit">
+          Photo by
+          <a
+            href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Halie West</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/bTzpau9mKT4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="info-side">
+      <div class="info">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up
+          <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form id="signupform" class="signup-form">
+        <div class="form-input">
+          <h1 class="input-section-title">Let's do this!</h1>
+          <div class="input-box">
+            <div class="column">
+              <input type="text" id="name" minlength="3" tabindex="1" />
+              <label for="name" data-help="Should be 3 digits"
+                >FIRST NAME</label
+              >
+              <input type="email" id="email" tabindex="3" required />
+              <label for="email" data-help="format: email@email.com"
+                >EMAIL*</label
+              >
+              <input
+                type="password"
+                id="password"
+                minlength="6"
+                tabindex="5"
+                required
+              />
+              <label for="password" data-help="Over 6 characters"
+                >PASSWORD</label
+              >
+            </div>
+            <div class="column">
+              <input type="text" id="last-name" tabindex="2" />
+              <label for="last-name">LAST NAME</label>
+              <input type="tel" id="phone" tabindex="4" />
+              <label for="phone">PHONE NUMBER</label>
+              <input
+                type="password"
+                id="password2"
+                minlength="6"
+                tabindex="6"
+                required
+              />
+              <label for="password2" data-help="Over 6 characters"
+                >CONFIRM PASSWORD</label
+              >
+              <p class="display"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-submit">
+          <input
+            type="submit"
+            name="submit"
+            id="submit"
+            class="submit"
+            value="Create Account"
+            tabindex="7"
+          />
+        </div>
+      </form>
+      <div class="loginCheck">
+        Already have an account? <a href="#">Log in</a>
+      </div>
+    </div>
+
+    <script>
+      const PW = document.getElementById("password");
+      const PW2 = document.getElementById("password2");
+      let word1 = "";
+      let word2 = "";
+
+      PW.addEventListener("input", checkPW);
+      PW2.addEventListener("input", checkPW);
+
+      function checkPW(e) {
+        if (e.target.id == "password") word1 = e.target.value;
+        if (e.target.id == "password2") word2 = e.target.value;
+
+        if (e.target.value.length > 5) {
+          if (word1 == word2) {
+            PW.classList.remove("error");
+            PW2.classList.remove("error");
+            return;
+          }
+        }
+        PW.classList.add("error");
+        PW2.classList.add("error");
+      }
+    </script>
+  </body>
+</html>
