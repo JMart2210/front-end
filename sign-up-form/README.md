@@ -1,5 +1,6 @@
 ## Sign-up Form
 **Live version here**: https://jmart2210.github.io/sign-up-form/
+
 **Tech used:** HTML, CSS, & JavaScript
 
 This signup page is laid out using flexbox. The signup form utilizes HTML5 form validation attributes, as well as Javascript custom validation rules and error messages to provide robust client-side validation. 
