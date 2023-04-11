@@ -1,4 +1,4 @@
-# Front-end - Summary of projects in this repo
+# Front End - A summary of projects in this repo
 
 # Tenzies Dice
 **Live Version here**: https://jmart2210.github.io/tenzies-dice/
